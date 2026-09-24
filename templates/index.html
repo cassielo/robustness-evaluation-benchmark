@@ -1,0 +1,214 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Robustness Evaluate</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta name="author" content="" />
+
+  <!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400" rel="stylesheet">
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/animate.css') }}">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/icomoon.css') }}">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/magnific-popup.css') }}">
+
+	<!-- Owl Carousel -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/owl.carousel.min.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/owl.theme.default.min.css') }}">
+
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+	<!-- Modernizr JS -->
+	<script src="{{ url_for('static', filename='js/modernizr-2.6.2.min.js') }}"></script>
+
+	</head>
+	<body>
+		
+	<div class="colorlib-loader"></div>
+
+	<div id="page">
+		<nav class="colorlib-nav" role="navigation">
+			<div class="top-menu">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-2">
+							<div id="colorlib-logo"><a href="/">Robustness Evaluate</a></div>
+						</div>
+						<div class="col-md-10 text-right menu-1">
+							<ul>
+								<li class="active"><a href="/">Home</a></li>
+								<li><a href="/about">About</a></li>
+								<li><a href="/benchmark">Benchmark</a></li>
+								<li><a href="/submit">Submit</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+
+		<section id="home" class="video-hero" style="height: 700px;background-size:cover; background-position: center center;background-attachment:fixed;" data-section="home">
+		<div class="overlay"></div>
+			<div class="display-t text-center">
+				<div class="display-tc">
+					<div class="container">
+						<div class="col-md-12 col-md-offset-0">
+							<div class="animate-box">
+								<h2>Evaluate how robust is your AI model</h2>
+								<p>using our Robustness Evaluation Benchmark</p>
+								<p><a href="/submit" class="btn btn-primary btn-lg btn-custom">Get Started</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<div class="colorlib-featured">
+			<div class="row animate-box">
+				<div class="featured-wrap">
+					<div class="owl-carousel">
+						<div class="item">
+							<div class="col-md-8 col-md-offset-2">
+								<div class="featured-entry">
+									<img class="img-responsive" src="{{ url_for('static', filename='images/1.png') }}" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="col-md-8 col-md-offset-2">
+								<div class="featured-entry">
+									<img class="img-responsive" src="{{ url_for('static', filename='images/2.png') }}" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="col-md-8 col-md-offset-2">
+								<div class="featured-entry">
+									<img class="img-responsive" src="{{ url_for('static', filename='images/3.png') }}" alt="">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="colorlib-intro">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 text-center colorlib-heading animate-box">
+						<h2>How it works</h2>
+						<p>Check this video to see how this platform works.</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="video colorlib-video" style="background-image: url({{ url_for('static', filename='images/video_cover.png') }});">
+						<a href="{{ url_for('static', filename='videos/web_video.mp4') }}" class="popup-vimeo"><i class="icon-play3"></i></a>
+						<div class="overlay"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="colorlib-services colorlib-bg-white">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4 text-center animate-box">
+						<div class="services">
+							<span class="icon">
+								<i class="icon-upload"></i>
+							</span>
+							<div class="desc">
+								<h3>Upload your model / attack</h3>
+								<p>We accept user uploads of their own model or attack to test. Users can submit their own model or attack anytime and anywhere.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 text-center animate-box">
+						<div class="services">
+							<span class="icon">
+								<i class="icon-calculator"></i>
+							</span>
+							<div class="desc">
+								<h3>Benchmark evaluation</h3>
+								<p>Each submission is evaluated against our benchmark of 13 attacks and 6 models, matched to the type and dataset selected.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 text-center animate-box">
+						<div class="services">
+							<span class="icon">
+								<i class="icon-mail5"></i>
+							</span>
+							<div class="desc">
+								<h3>Results by email</h3>
+								<p>When the evaluation is complete, a report of the robustness results is sent to the email address provided.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<footer id="colorlib-footer">
+			<div class="copy">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12 text-center">
+							Design by SY LAB
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up2"></i></a>
+	</div>
+	
+	<!-- jQuery -->
+	<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+	<!-- jQuery Easing -->
+	<script src="{{ url_for('static', filename='js/jquery.easing.1.3.js') }}"></script>
+	<!-- Bootstrap -->
+	<script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+	<!-- Waypoints -->
+	<script src="{{ url_for('static', filename='js/jquery.waypoints.min.js') }}"></script>
+	<!-- Stellar Parallax -->
+	<script src="{{ url_for('static', filename='js/jquery.stellar.min.js') }}"></script>
+	<!-- Owl carousel -->
+	<script src="{{ url_for('static', filename='js/owl.carousel.min.js') }}"></script>
+	<!-- Magnific Popup -->
+	<script src="{{ url_for('static', filename='js/jquery.magnific-popup.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/magnific-popup-options.js') }}"></script>
+	<!-- Counters -->
+	<script src="{{ url_for('static', filename='js/jquery.countTo.js') }}"></script>
+	<!-- Main -->
+	<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+	</body>
+</html>

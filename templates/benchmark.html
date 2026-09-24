@@ -1,0 +1,379 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Robustness Evaluate</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta name="author" content="" />
+
+	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400" rel="stylesheet">
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/animate.css') }}">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/icomoon.css') }}">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/magnific-popup.css') }}">
+
+	<!-- Owl Carousel -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/owl.carousel.min.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/owl.theme.default.min.css') }}">
+
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+	<!-- Modernizr JS -->
+	<script src="{{ url_for('static', filename='js/modernizr-2.6.2.min.js') }}"></script>
+
+</head>
+<body>
+
+	<div class="colorlib-loader"></div>
+
+	<div id="page">
+		<nav class="colorlib-nav" role="navigation">
+			<div class="top-menu">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-2">
+							<div id="colorlib-logo"><a href="/">Robustness Evaluate</a></div>
+						</div>
+						<div class="col-md-10 text-right menu-1">
+							<ul>
+								<li><a href="/">Home</a></li>
+								<li><a href="/about">About</a></li>
+								<li class="active"><a href="/benchmark">Benchmark</a></li>
+								<li><a href="/submit">Submit</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+
+		<section id="home" class="video-hero" style="height: 400px;  background-size:cover; background-position: center center;background-attachment:fixed;" data-section="home">
+			<div class="overlay"></div>
+			<div class="display-t display-t2 text-center">
+				<div class="display-tc display-tc2">
+					<div class="container">
+						<div class="col-md-12 col-md-offset-0">
+							<div class="animate-box">
+								<h2>Robustness Evaluation Benchmark</h2>
+								<!-- <p class="breadcrumbs"><span><a href="index.html">Home</a></span> <span>Contact</span></p> -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		<div class="colorlib-blog" id = "robustness">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 animate-box">
+						<article>
+							<div style=" height: 60px;  text-align: center; margin-bottom: 10px; margin-top: 10px; display: flex; justify-content: space-around;" class="d-flex flex-row justify-content-around block"><h2>Benchmark Table</h2></div>
+							<div class="carousel slide result" data-ride="carousel" id = "heroCarousel">
+								<ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+								<div class="carousel-inner" role="listbox">
+									<div class="carousel-item active" id ="result">
+										<div id="1" class="d-flex flex-row justify-content-around block" style="margin-bottom: 10px; line-height: 60px; display: flex; justify-content: space-around;">
+											<div style="width: 120px;"></div>
+											<div id="div-0" class="testClass animate__animated animate__fadeInUp" style="width: 60px; writing-mode: sideways-lr;"><h4 style="line-height: 60px; margin: 0px;" >AdditiveUniformNoiseAttack</h4></div>
+											<div id="div-1" class="testClass animate__animated animate__fadeInUp" style="width: 60px; writing-mode: sideways-lr;"><h4 style="line-height: 60px; margin: 0px;" >BasicIterativeMethod</h4></div>
+											<div id="div-2" class="testClass animate__animated animate__fadeInUp" style="width: 60px;  writing-mode: sideways-lr;"><h4 style="line-height: 60px; margin: 0px;" >ContrastReductionAttack</h4></div>
+											<div id="div-3" class="testClass animate__animated animate__fadeInUp" style="width: 60px;  writing-mode: sideways-lr;"><h4 style="line-height: 60px; margin: 0px;" >DeepFool_CleverHans</h4></div>
+											<div id="div-4" class="testClass animate__animated animate__fadeInUp" style="width: 60px;  writing-mode: sideways-lr;"><h4 style="line-height: 60px; margin: 0px;" >DeepFool_Foolbox</h4></div>
+											<div id="div-5" class="testClass animate__animated animate__fadeInUp" style="width: 60px; writing-mode: sideways-lr;"><h4 style="line-height: 60px; margin: 0px;" >FastGradientMethod_ART</h4></div>
+											<div id="div-6" class="testClass animate__animated animate__fadeInUp" style="width: 60px; writing-mode: sideways-lr;"><h4 style="line-height: 60px; margin: 0px;" >FastGradientMethod_CleverHans</h4></div>
+											<div id="div-7" class="testClass animate__animated animate__fadeInUp" style="width: 60px; writing-mode: sideways-lr;"><h4 style="line-height: 60px; margin: 0px;" >GaussianBlurAttack</h4></div>
+											<div id="div-8" class="testClass animate__animated animate__fadeInUp" style="width: 60px; writing-mode: sideways-lr;"><h4 style="line-height: 60px; margin: 0px;" >GradientSignAttack</h4></div>
+											<div id="div-9" class="testClass animate__animated animate__fadeInUp" style="width: 60px; writing-mode: sideways-lr;"><h4 style="line-height: 60px; margin: 0px;" >IterativeGradientSignAttack</h4></div>
+											<div id="div-10" class="testClass animate__animated animate__fadeInUp" style="width: 60px; writing-mode: sideways-lr;"><h4 style="line-height: 60px; margin: 0px;" >LBFGSAttack</h4></div>
+											<div id="div-11" class="testClass animate__animated animate__fadeInUp" style="width: 60px; writing-mode: sideways-lr;"><h4 style="line-height: 60px; margin: 0px;" >ProjectedGradientDescent</h4></div>
+											<div id="div-12" class="testClass animate__animated animate__fadeInUp" style="width: 60px; writing-mode: sideways-lr;"><h4 style="line-height: 60px; margin: 0px;" >SaltandPepperNoiseAttack</h4></div>
+											<div id="div-13" class="testClass animate__animated animate__fadeInUp" style="width: 60px; writing-mode: sideways-lr;"><h4 style="line-height: 60px; margin: 0px;" >Average</h4></div>
+										</div>
+										<div id="2" class="d-flex flex-row justify-content-around block" style="margin-bottom: 10px; line-height: 60px; display:flex; justify-content: space-around;">
+											<div class="testClass animate__animated animate__fadeInUp" style="width: 120px; height: 60px; text-align: right; "><h4 style="line-height: 60px; margin: 0px;" >Simple_CNN</h4></div>
+											<div id="div-0" class="testClass" style="width: 60px; height: 60px; background-color: rgb(187, 59, 111); color: white; font-size: 15px; text-align: center;">0.929</div>
+											<div id="div-1" class="testClass" style="width: 60px; height: 60px; background-color: rgb(96, 26, 130); color: white; font-size: 15px; text-align: center;">0.994</div>
+											<div id="div-2" class="testClass" style="width: 60px; height: 60px; background-color: rgb(197, 65, 105); color: white; font-size: 15px; text-align: center;">0.913</div>
+											<div id="div-3" class="testClass" style="width: 60px; height: 60px; background-color: rgb(108, 29, 130); color: white; font-size: 15px; text-align: center;">0.991</div>
+											<div id="div-4" class="testClass" style="width: 60px; height: 60px; background-color: rgb(70, 20, 130); color: white; font-size: 15px; text-align: center;">1.000</div>
+											<div id="div-5" class="testClass" style="width: 60px; height: 60px; background-color: rgb(178, 54, 116); color: white; font-size: 15px; text-align: center;">0.943</div>
+											<div id="div-6" class="testClass" style="width: 60px; height: 60px; background-color: rgb(213, 73, 87); color: white; font-size: 15px; text-align: center;">0.884</div>
+											<div id="div-7" class="testClass" style="width: 60px; height: 60px; background-color: rgb(196, 65, 105); color: white; font-size: 15px; text-align: center;">0.914</div>
+											<div id="div-8" class="testClass" style="width: 60px; height: 60px; background-color: rgb(157, 41, 129); color: white; font-size: 15px; text-align: center;">0.977</div>
+											<div id="div-9" class="testClass" style="width: 60px; height: 60px; background-color: rgb(70, 20, 130); color: white; font-size: 15px; text-align: center;">1.000</div>
+											<div id="div-10" class="testClass" style="width: 60px; height: 60px; background-color: rgb(70, 20, 130); color: white; font-size: 15px; text-align: center;">1.000</div>
+											<div id="div-11" class="testClass" style="width: 60px; height: 60px; background-color: rgb(96, 26, 130); color: white; font-size: 15px; text-align: center;">0.994</div>
+											<div id="div-12" class="testClass" style="width: 60px; height: 60px; background-color: rgb(79, 22, 130); color: white; font-size: 15px; text-align: center;">0.998</div>
+											<div id="div-13" class="testClass" style="width: 60px; height: 60px; background-color: rgb(165, 46, 124); color: white; font-size: 15px; text-align: center;">0.964</div>
+										</div>
+										<div id="3" class="d-flex flex-row justify-content-around block" style="margin-bottom: 10px; line-height: 60px; display: flex; justify-content: space-around;">
+											<div class="testClass animate__animated animate__fadeInUp" style="width: 120px; height: 60px;  text-align: right;"><h4 style="line-height: 60px; margin: 0px;" >C&amp;W</h4></div>
+											<div id="div-0" class="testClass" style="width: 60px; height: 60px; background-color: rgb(117, 31, 130); color: white; font-size: 15px; text-align: center;">0.989</div>
+											<div id="div-1" class="testClass" style="width: 60px; height: 60px; background-color: rgb(96, 26, 130); color: white; font-size: 15px; text-align: center;">0.994</div>
+											<div id="div-2" class="testClass" style="width: 60px; height: 60px; background-color: rgb(218, 75, 80); color: white; font-size: 15px; text-align: center;">0.875</div>
+											<div id="div-3" class="testClass" style="width: 60px; height: 60px; background-color: rgb(108, 29, 130); color: white; font-size: 15px; text-align: center;">0.991</div>
+											<div id="div-4" class="testClass" style="width: 60px; height: 60px; background-color: rgb(70, 20, 130); color: white; font-size: 15px; text-align: center;">1.000</div>
+											<div id="div-5" class="testClass" style="width: 60px; height: 60px; background-color: rgb(226, 78, 66); color: white; font-size: 15px; text-align: center;">0.858</div>
+											<div id="div-6" class="testClass" style="width: 60px; height: 60px; background-color: rgb(255, 160, 20); color: white; font-size: 15px; text-align: center;">0.625</div>
+											<div id="div-7" class="testClass" style="width: 60px; height: 60px; background-color: rgb(218, 75, 79); color: white; font-size: 15px; text-align: center;">0.874</div>
+											<div id="div-8" class="testClass" style="width: 60px; height: 60px; background-color: rgb(166, 47, 123); color: white; font-size: 15px; text-align: center;">0.962</div>
+											<div id="div-9" class="testClass" style="width: 60px; height: 60px; background-color: rgb(70, 20, 130); color: white; font-size: 15px; text-align: center;">1.000</div>
+											<div id="div-10" class="testClass" style="width: 60px; height: 60px; background-color: rgb(70, 20, 130); color: white; font-size: 15px; text-align: center;">1.000</div>
+											<div id="div-11" class="testClass" style="width: 60px; height: 60px; background-color: rgb(96, 26, 130); color: white; font-size: 15px; text-align: center;">0.994</div>
+											<div id="div-12" class="testClass" style="width: 60px; height: 60px; background-color: rgb(70, 20, 130); color: white; font-size: 15px; text-align: center;">1.000</div>
+											<div id="div-13" class="testClass" style="width: 60px; height: 60px; background-color: rgb(183, 57, 113); color: white; font-size: 15px; text-align: center;">0.936</div>
+										</div>
+										<div id="4" class="d-flex flex-row justify-content-around block" style="margin-bottom: 10px; line-height: 60px; display: flex; justify-content: space-around;">
+											<div class="testClass animate__animated animate__fadeInUp" style="width: 120px; height: 60px;  text-align: right; "><h4 style="line-height: 60px; margin: 0px;" >All_CNN</h4></div>
+											<div id="div-0" class="testClass" style="width: 60px; height: 60px; background-color: rgb(100, 27, 130); color: white; font-size: 15px; text-align: center;">0.993</div>
+											<div id="div-1" class="testClass" style="width: 60px; height: 60px; background-color: rgb(189, 60, 110); color: white; font-size: 15px; text-align: center;">0.926</div>
+											<div id="div-2" class="testClass" style="width: 60px; height: 60px; background-color: rgb(168, 48, 122); color: white; font-size: 15px; text-align: center;">0.959</div>
+											<div id="div-3" class="testClass" style="width: 60px; height: 60px; background-color: rgb(74, 21, 130); color: white; font-size: 15px; text-align: center;">0.999</div>
+											<div id="div-4" class="testClass" style="width: 60px; height: 60px; background-color: rgb(70, 20, 130); color: white; font-size: 15px; text-align: center;">1.000</div>
+											<div id="div-5" class="testClass" style="width: 60px; height: 60px; background-color: rgb(210, 72, 92); color: white; font-size: 15px; text-align: center;">0.890</div>
+											<div id="div-6" class="testClass" style="width: 60px; height: 60px; background-color: rgb(74, 21, 130); color: white; font-size: 15px; text-align: center;">0.999</div>
+											<div id="div-7" class="testClass" style="width: 60px; height: 60px; background-color: rgb(203, 69, 101); color: white; font-size: 15px; text-align: center;">0.903</div>
+											<div id="div-8" class="testClass" style="width: 60px; height: 60px; background-color: rgb(91, 25, 130); color: white; font-size: 15px; text-align: center;">0.995</div>
+											<div id="div-9" class="testClass" style="width: 60px; height: 60px; background-color: rgb(70, 20, 130); color: white; font-size: 15px; text-align: center;">1.000</div>
+											<div id="div-10" class="testClass" style="width: 60px; height: 60px; background-color: rgb(70, 20, 130); color: white; font-size: 15px; text-align: center;">1.000</div>
+											<div id="div-11" class="testClass" style="width: 60px; height: 60px; background-color: rgb(189, 60, 110); color: white; font-size: 15px; text-align: center;">0.926</div>
+											<div id="div-12" class="testClass" style="width: 60px; height: 60px; background-color: rgb(174, 51, 119); color: white; font-size: 15px; text-align: center;">0.950</div>
+											<div id="div-13" class="testClass" style="width: 60px; height: 60px; background-color: rgb(165, 46, 124); color: white; font-size: 15px; text-align: center;">0.965</div>
+										</div>
+										<div id="5" class="d-flex flex-row justify-content-around block" style="margin-bottom: 10px; line-height: 60px; display: flex; justify-content: space-around;">
+											<div class="testClass animate__animated animate__fadeInUp" style="width: 120px; height: 60px;  text-align: right; "><h4 style="line-height: 60px; margin: 0px;" >VGG19</h4></div>
+											<div id="div-0" class="testClass" style="width: 60px; height: 60px; background-color: rgb(186, 59, 111); color: white; font-size: 15px; text-align: center;">0.930</div>
+											<div id="div-1" class="testClass" style="width: 60px; height: 60px; background-color: rgb(113, 30, 130); color: white; font-size: 15px; text-align: center;">0.990</div>
+											<div id="div-2" class="testClass" style="width: 60px; height: 60px; background-color: rgb(168, 48, 123); color: white; font-size: 15px; text-align: center;">0.960</div>
+											<div id="div-3" class="testClass" style="width: 60px; height: 60px; background-color: rgb(113, 30, 130); color: white; font-size: 15px; text-align: center;">0.990</div>
+											<div id="div-4" class="testClass" style="width: 60px; height: 60px; background-color: rgb(205, 70, 100); color: white; font-size: 15px; text-align: center;">0.900</div>
+											<div id="div-5" class="testClass" style="width: 60px; height: 60px; background-color: rgb(113, 30, 130); color: white; font-size: 15px; text-align: center;">0.990</div>
+											<div id="div-6" class="testClass" style="width: 60px; height: 60px; background-color: rgb(113, 30, 130); color: white; font-size: 15px; text-align: center;">0.990</div>
+											<div id="div-7" class="testClass" style="width: 60px; height: 60px; background-color: rgb(155, 40, 130); color: white; font-size: 15px; text-align: center;">0.980</div>
+											<div id="div-8" class="testClass" style="width: 60px; height: 60px; background-color: rgb(193, 63, 108); color: white; font-size: 15px; text-align: center;">0.920</div>
+											<div id="div-9" class="testClass" style="width: 60px; height: 60px; background-color: rgb(205, 70, 100); color: white; font-size: 15px; text-align: center;">0.900</div>
+											<div id="div-10" class="testClass" style="width: 60px; height: 60px; background-color: rgb(70, 20, 130); color: white; font-size: 15px; text-align: center;">1.000</div>
+											<div id="div-11" class="testClass" style="width: 60px; height: 60px; background-color: rgb(113, 30, 130); color: white; font-size: 15px; text-align: center;">0.990</div>
+											<div id="div-12" class="testClass" style="width: 60px; height: 60px; background-color: rgb(70, 20, 130); color: white; font-size: 15px; text-align: center;">1.000</div>
+											<div id="div-13" class="testClass" style="width: 60px; height: 60px; background-color: rgb(165, 46, 124); color: white; font-size: 15px; text-align: center;">0.965</div>
+										</div>
+										<div id="6" class="d-flex flex-row justify-content-around block" style="margin-bottom: 10px; line-height: 60px; display: flex; justify-content: space-around;">
+											<div class="testClass animate__animated animate__fadeInUp" style="width: 120px; height: 60px;  text-align: right; "><h4 style="line-height: 60px; margin: 0px;" >ResNet50</h4></div>
+											<div id="div-0" class="testClass" style="width: 60px; height: 60px; background-color: rgb(168, 48, 123); color: white; font-size: 15px; text-align: center;">0.960</div>
+											<div id="div-1" class="testClass" style="width: 60px; height: 60px; background-color: rgb(70, 20, 130); color: white; font-size: 15px; text-align: center;">1.000</div>
+											<div id="div-2" class="testClass" style="width: 60px; height: 60px; background-color: rgb(168, 48, 123); color: white; font-size: 15px; text-align: center;">0.960</div>
+											<div id="div-3" class="testClass" style="width: 60px; height: 60px; background-color: rgb(155, 40, 130); color: white; font-size: 15px; text-align: center;">0.980</div>
+											<div id="div-4" class="testClass" style="width: 60px; height: 60px; background-color: rgb(180, 55, 115); color: white; font-size: 15px; text-align: center;">0.940</div>
+											<div id="div-5" class="testClass" style="width: 60px; height: 60px; background-color: rgb(70, 20, 130); color: white; font-size: 15px; text-align: center;">1.000</div>
+											<div id="div-6" class="testClass" style="width: 60px; height: 60px; background-color: rgb(70, 20, 130); color: white; font-size: 15px; text-align: center;">1.000</div>
+											<div id="div-7" class="testClass" style="width: 60px; height: 60px; background-color: rgb(186, 59, 111); color: white; font-size: 15px; text-align: center;">0.930</div>
+											<div id="div-8" class="testClass" style="width: 60px; height: 60px; background-color: rgb(168, 48, 123); color: white; font-size: 15px; text-align: center;">0.960</div>
+											<div id="div-9" class="testClass" style="width: 60px; height: 60px; background-color: rgb(186, 59, 111); color: white; font-size: 15px; text-align: center;">0.930</div>
+											<div id="div-10" class="testClass" style="width: 60px; height: 60px; background-color: rgb(161, 44, 126); color: white; font-size: 15px; text-align: center;">0.970</div>
+											<div id="div-11" class="testClass" style="width: 60px; height: 60px; background-color: rgb(70, 20, 130); color: white; font-size: 15px; text-align: center;">1.000</div>
+											<div id="div-12" class="testClass" style="width: 60px; height: 60px; background-color: rgb(70, 20, 130); color: white; font-size: 15px; text-align: center;">1.000</div>
+											<div id="div-13" class="testClass" style="width: 60px; height: 60px; background-color: rgb(160, 43, 127); color: white; font-size: 15px; text-align: center;">0.972</div>
+										</div>
+										<div id="7" class="d-flex flex-row justify-content-around block" style="margin-bottom: 10px; line-height: 60px; display: flex; justify-content: space-around;">
+											<div class="testClass animate__animated animate__fadeInUp" style="width: 120px; height: 60px;  text-align: right; "><h4 style="line-height: 60px; margin: 0px;" >InceptionV3</h4></div>
+											<div id="div-0" class="testClass" style="width: 60px; height: 60px; background-color: rgb(240, 84, 44); color: white; font-size: 15px; text-align: center;">0.830</div>
+											<div id="div-1" class="testClass" style="width: 60px; height: 60px; background-color: rgb(210, 72, 92); color: white; font-size: 15px; text-align: center;">0.890</div>
+											<div id="div-2" class="testClass" style="width: 60px; height: 60px; background-color: rgb(245, 86, 36); color: white; font-size: 15px; text-align: center;">0.820</div>
+											<div id="div-3" class="testClass" style="width: 60px; height: 60px; background-color: rgb(113, 30, 130); color: white; font-size: 15px; text-align: center;">0.990</div>
+											<div id="div-4" class="testClass" style="width: 60px; height: 60px; background-color: rgb(235, 82, 52); color: white; font-size: 15px; text-align: center;">0.840</div>
+											<div id="div-5" class="testClass" style="width: 60px; height: 60px; background-color: rgb(205, 70, 100); color: white; font-size: 15px; text-align: center;">0.900</div>
+											<div id="div-6" class="testClass" style="width: 60px; height: 60px; background-color: rgb(70, 20, 130); color: white; font-size: 15px; text-align: center;">1.000</div>
+											<div id="div-7" class="testClass" style="width: 60px; height: 60px; background-color: rgb(186, 59, 111); color: white; font-size: 15px; text-align: center;">0.930</div>
+											<div id="div-8" class="testClass" style="width: 60px; height: 60px; background-color: rgb(230, 80, 60); color: white; font-size: 15px; text-align: center;">0.850</div>
+											<div id="div-9" class="testClass" style="width: 60px; height: 60px; background-color: rgb(230, 80, 60); color: white; font-size: 15px; text-align: center;">0.850</div>
+											<div id="div-10" class="testClass" style="width: 60px; height: 60px; background-color: rgb(210, 72, 92); color: white; font-size: 15px; text-align: center;">0.890</div>
+											<div id="div-11" class="testClass" style="width: 60px; height: 60px; background-color: rgb(210, 72, 92); color: white; font-size: 15px; text-align: center;">0.890</div>
+											<div id="div-12" class="testClass" style="width: 60px; height: 60px; background-color: rgb(70, 20, 130); color: white; font-size: 15px; text-align: center;">1.000</div>
+											<div id="div-13" class="testClass" style="width: 60px; height: 60px; background-color: rgb(206, 70, 99); color: white; font-size: 15px; text-align: center;">0.898</div>
+										</div>
+									</div>
+
+								</div>
+								<div class="carousel-item" id ="user1">
+
+								</div>
+							</div>
+							<a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
+								<span class="carousel-control-prev-icon icofont-simple-left" aria-hidden="true"></span>
+								<span class="sr-only">Previous</span>
+							</a>
+
+							<a class="carousel-control-next" href="#heroCarousel" role="button" data-slide="next">
+								<span class="carousel-control-next-icon icofont-simple-right" aria-hidden="true"></span>
+								<span class="sr-only">Next</span>
+							</a>
+							<div id = "accuracy" class="accuracy">
+								<div style="width: 100%; height: 60px;"></div>
+								<div style="height: 60px;  text-align: center;  margin-bottom: 10px; display: flex; justify-content: space-around;" class="d-flex flex-row justify-content-around block"><h2>Attack Accuracy</h2></div>
+								<div id="8" class="d-flex flex-row justify-content-around block" style="margin-bottom: 10px; line-height: 60px; display: flex; justify-content: space-around;">
+									<div id="div-1000" class="testClass animate__animated animate__fadeInUp" style="width: 120px; height: 60px;  text-align: center;"><h4 style="line-height: 60px; margin: 0px;" >0.980~1.000</h4></div>
+									<div id="div-1000" class="testClass" style="width: 60px; height: 60px; font-size: 15px; text-align: center; background-color: rgb(70, 20, 130); color: white;">1.000</div>
+									<div id="div-998" class="testClass" style="width: 60px; height: 60px; font-size: 15px; text-align: center; background-color: rgb(79, 22, 130); color: white;">0.998</div>
+									<div id="div-996" class="testClass" style="width: 60px; height: 60px; font-size: 15px; text-align: center; background-color: rgb(87, 24, 130); color: white;">0.996</div>
+									<div id="div-994" class="testClass" style="width: 60px; height: 60px; font-size: 15px; text-align: center; background-color: rgb(96, 26, 130); color: white;">0.994</div>
+									<div id="div-992" class="testClass" style="width: 60px; height: 60px; font-size: 15px; text-align: center; background-color: rgb(104, 28, 130); color: white;">0.992</div>
+									<div id="div-990" class="testClass" style="width: 60px; height: 60px; font-size: 15px; text-align: center; background-color: rgb(113, 30, 130); color: white;">0.990</div>
+									<div id="div-988" class="testClass" style="width: 60px; height: 60px; font-size: 15px; text-align: center; background-color: rgb(121, 32, 130); color: white;">0.988</div>
+									<div id="div-986" class="testClass" style="width: 60px; height: 60px; font-size: 15px; text-align: center; background-color: rgb(130, 34, 130); color: white;">0.986</div>
+									<div id="div-984" class="testClass" style="width: 60px; height: 60px; font-size: 15px; text-align: center; background-color: rgb(138, 36, 130); color: white;">0.984</div>
+									<div id="div-982" class="testClass" style="width: 60px; height: 60px; font-size: 15px; text-align: center; background-color: rgb(147, 38, 130); color: white;">0.982</div>
+									<div id="div-980" class="testClass" style="width: 60px; height: 60px; font-size: 15px; text-align: center; background-color: rgb(155, 40, 130); color: white;">0.980</div>
+									<div style="width: 60px;"></div>
+									<div style="width: 60px;"></div>
+									<div style="width: 60px;"></div>
+								</div>
+								<div id="9" class="d-flex flex-row justify-content-around block" style="margin-bottom: 10px; line-height: 60px; display: flex; justify-content: space-around;">
+									<div id="div-980" class="testClass animate__animated animate__fadeInUp" style="width: 120px; height: 60px; text-align: center;"><h4 style="line-height: 60px; margin: 0px;" >0.900~0.980</h4></div>
+									<div id="div-980" class="testClass" style="width: 60px; height: 60px; background-color: rgb(155, 40, 130); font-size: 15px; text-align: center; color: white;">0.980</div>
+									<div id="div-972" class="testClass" style="width: 60px; height: 60px; background-color: rgb(160, 43, 127); font-size: 15px; text-align: center; color: white;">0.972</div>
+									<div id="div-964" class="testClass" style="width: 60px; height: 60px; background-color: rgb(165, 46, 124); font-size: 15px; text-align: center; color: white;">0.964</div>
+									<div id="div-956" class="testClass" style="width: 60px; height: 60px; background-color: rgb(170, 49, 121); font-size: 15px; text-align: center; color: white;">0.956</div>
+									<div id="div-948" class="testClass" style="width: 60px; height: 60px; background-color: rgb(175, 52, 118); font-size: 15px; text-align: center; color: white;">0.948</div>
+									<div id="div-940" class="testClass" style="width: 60px; height: 60px; background-color: rgb(180, 55, 115); font-size: 15px; text-align: center; color: white;">0.940</div>
+									<div id="div-932" class="testClass" style="width: 60px; height: 60px; background-color: rgb(185, 58, 112); font-size: 15px; text-align: center; color: white;">0.932</div>
+									<div id="div-924" class="testClass" style="width: 60px; height: 60px; background-color: rgb(190, 61, 109); font-size: 15px; text-align: center; color: white;">0.924</div>
+									<div id="div-916" class="testClass" style="width: 60px; height: 60px; background-color: rgb(195, 64, 106); font-size: 15px; text-align: center; color: white;">0.916</div>
+									<div id="div-908" class="testClass" style="width: 60px; height: 60px; background-color: rgb(200, 67, 103); font-size: 15px; text-align: center; color: white;">0.908</div>
+									<div id="div-900" class="testClass" style="width: 60px; height: 60px; background-color: rgb(205, 70, 100); font-size: 15px; text-align: center; color: white;">0.900</div>
+									<div style="width: 60px;"></div>
+									<div style="width: 60px;"></div>
+									<div style="width: 60px;"></div>
+								</div>
+								<div id="10" class="d-flex flex-row justify-content-around block" style="margin-bottom: 10px; line-height: 60px; display: flex; justify-content: space-around;">
+									<div id="div-900" class="testClass animate__animated animate__fadeInUp" style="width: 120px; height: 60px;  text-align: center;"><h4 style="line-height: 60px; margin: 0px;" >0.800~0.900</h4></div>
+									<div id="div-900" class="testClass" style="width: 60px; height: 60px; font-size: 15px; text-align: center; background-color: rgb(205, 70, 100); color: white;">0.900</div>
+									<div id="div-890" class="testClass" style="width: 60px; height: 60px; font-size: 15px; text-align: center; background-color: rgb(210, 72, 92); color: white;">0.890</div>
+									<div id="div-880" class="testClass" style="width: 60px; height: 60px; font-size: 15px; text-align: center; background-color: rgb(215, 74, 84); color: white;">0.880</div>
+									<div id="div-870" class="testClass" style="width: 60px; height: 60px; font-size: 15px; text-align: center; background-color: rgb(220, 76, 76); color: white;">0.870</div>
+									<div id="div-860" class="testClass" style="width: 60px; height: 60px; font-size: 15px; text-align: center; background-color: rgb(225, 78, 68); color: white;">0.860</div>
+									<div id="div-850" class="testClass" style="width: 60px; height: 60px; font-size: 15px; text-align: center; background-color: rgb(230, 80, 60); color: white;">0.850</div>
+									<div id="div-840" class="testClass" style="width: 60px; height: 60px; font-size: 15px; text-align: center; background-color: rgb(235, 82, 52); color: white;">0.840</div>
+									<div id="div-830" class="testClass" style="width: 60px; height: 60px; font-size: 15px; text-align: center; background-color: rgb(240, 84, 44); color: white;">0.830</div>
+									<div id="div-820" class="testClass" style="width: 60px; height: 60px; font-size: 15px; text-align: center; background-color: rgb(245, 86, 36); color: white;">0.820</div>
+									<div id="div-810" class="testClass" style="width: 60px; height: 60px; font-size: 15px; text-align: center; background-color: rgb(250, 88, 28); color: white;">0.810</div>
+									<div id="div-800" class="testClass" style="width: 60px; height: 60px; font-size: 15px; text-align: center; background-color: rgb(255, 90, 20); color: white;">0.800</div>
+									<div style="width: 60px;"></div>
+									<div style="width: 60px;"></div>
+									<div style="width: 60px;"></div>
+								</div>
+								<div id="11" class="d-flex flex-row justify-content-around block" style="margin-bottom: 10px; line-height: 60px; display: flex; justify-content: space-around;">
+									<div id="div-800" class="testClass animate__animated animate__fadeInUp" style="width: 120px; height: 60px; text-align: center;"><h4 style="line-height: 60px; margin: 0px;" >0.600~0.800</h4></div>
+									<div id="div-800" class="testClass" style="width: 60px; height: 60px; background-color: rgb(255, 90, 20); font-size: 15px; text-align: center; color: white;">0.800</div>
+									<div id="div-780" class="testClass" style="width: 60px; height: 60px; background-color: rgb(255, 98, 20); font-size: 15px; text-align: center; color: white;">0.780</div>
+									<div id="div-760" class="testClass" style="width: 60px; height: 60px; background-color: rgb(255, 106, 20); font-size: 15px; text-align: center; color: white;">0.760</div>
+									<div id="div-740" class="testClass" style="width: 60px; height: 60px; background-color: rgb(255, 114, 20); font-size: 15px; text-align: center; color: white;">0.740</div>
+									<div id="div-720" class="testClass" style="width: 60px; height: 60px; background-color: rgb(255, 122, 20); font-size: 15px; text-align: center; color: white;">0.720</div>
+									<div id="div-700" class="testClass" style="width: 60px; height: 60px; background-color: rgb(255, 130, 20); font-size: 15px; text-align: center; color: white;">0.700</div>
+									<div id="div-680" class="testClass" style="width: 60px; height: 60px; background-color: rgb(255, 138, 20); font-size: 15px; text-align: center; color: white;">0.680</div>
+									<div id="div-660" class="testClass" style="width: 60px; height: 60px; background-color: rgb(255, 146, 20); font-size: 15px; text-align: center; color: white;">0.660</div>
+									<div id="div-640" class="testClass" style="width: 60px; height: 60px; background-color: rgb(255, 154, 20); font-size: 15px; text-align: center; color: white;">0.640</div>
+									<div id="div-620" class="testClass" style="width: 60px; height: 60px; background-color: rgb(255, 162, 20); font-size: 15px; text-align: center; color: white;">0.620</div>
+									<div id="div-600" class="testClass" style="width: 60px; height: 60px; background-color: rgb(255, 170, 20); font-size: 15px; text-align: center; color: white;">0.600</div>
+									<div style="width: 60px;"></div>
+									<div style="width: 60px;"></div>
+									<div style="width: 60px;"></div>
+								</div>
+								<div style="margin-top: 20px; margin-left: 1%; margin-bottom: 30px; line-height: 35px; display: flex; justify-content: space-around;" class="d-flex flex-row justify-content-around block"><p>The table shows the attack accuracy of the six models and the right side of it is the deviation of each accuracy of attacks Figure 6 display Table 2 as palette so that we can easily realize the attack rates The color depends on how robust the model is. The more orange, the lower accurate of the attack; the more purple, the higher accurate of the attack. On the three datasets used, CIFAR 10 yielded the highest attack accuracy, whereas the All CNN model exhibited poor defense capability against various attacks. On MNIST, the C&amp;W model was more robust than simple CNN, whereas on ImageNet, InceptionV3 had the highest defensive capability and Resnet 50 had the lowest.</p></div>
+							</div>
+
+							
+						</article>
+						<article>
+							<div style=" height: 60px;  text-align: center; color: black; margin-bottom: 10px; margin-top: 10px; display: flex; justify-content: space-around;" class="d-flex flex-row justify-content-around block"><h2>Bar Graph</h2></div>
+							<div class="carousel slide table" data-ride="carousel" id = "heroCarousel_table">
+								<ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+								<div class="carousel-inner" role="listbox">
+									<div class="carousel-item active" id ="table">
+										<div class="d-flex flex-row justify-content-around bkock" style="display: flex; justify-content: space-around;" >
+											<img src="{{ url_for('static', filename='images/table.png') }}" style="height: 500px;">
+										</div>
+									</div>
+									<div class="carousel-item" id ="table1">
+
+									</div>
+								</div>
+								<a class="carousel-control-prev" href="#heroCarousel_table" role="button" data-slide="prev">
+									<span class="carousel-control-prev-icon icofont-simple-left" aria-hidden="true"></span>
+									<span class="sr-only">Previous</span>
+								</a>
+
+								<a class="carousel-control-next" href="#heroCarousel_table" role="button" data-slide="next">
+									<span class="carousel-control-next-icon icofont-simple-right" aria-hidden="true"></span>
+									<span class="sr-only">Next</span>
+								</a>
+							</div>
+							<div style=" margin-left: 1%; margin-bottom: 10px; line-height: 35px; display: flex; justify-content: space-around;" class="d-flex flex-row justify-content-around block"><p>The bar graph plots the robustness of the six models used in our experiment. It shows that the C&amp;W model delivered the best robustness against the 13 kinds of attacks, followed by InceptionV3. ResNet50 yielded the worst performance with a negative score. As our algorithm is not designed to compare model, but to calculate the relationship between an attack and the model, the greater the numbers of attacks and models we use, the more reliable the results obtained are.</p></div>
+						</article>
+					</div>
+				</div>	
+			</div>
+		</div>
+
+		<footer id="colorlib-footer">
+			<div class="copy">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12 text-center">
+							Design by SY LAB
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up2"></i></a>
+	</div>
+
+	<!-- jQuery -->
+	<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+	<!-- jQuery Easing -->
+	<script src="{{ url_for('static', filename='js/jquery.easing.1.3.js') }}"></script>
+	<!-- Bootstrap -->
+	<script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+	<!-- Waypoints -->
+	<script src="{{ url_for('static', filename='js/jquery.waypoints.min.js') }}"></script>
+	<!-- Stellar Parallax -->
+	<script src="{{ url_for('static', filename='js/jquery.stellar.min.js') }}"></script>
+	<!-- Owl carousel -->
+	<script src="{{ url_for('static', filename='js/owl.carousel.min.js') }}"></script>
+	<!-- Magnific Popup -->
+	<script src="{{ url_for('static', filename='js/jquery.magnific-popup.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/magnific-popup-options.js') }}"></script>
+	<!-- Counters -->
+	<script src="{{ url_for('static', filename='js/jquery.countTo.js') }}"></script>
+	<!-- Main -->
+	<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+</body>
+</html>

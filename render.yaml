@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: robustness-evaluation-benchmark
+    runtime: python
+    plan: free
+    region: oregon
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    envVars:
+      - key: SECRET_KEY
+        generateValue: true
+      - key: AGENTMAIL_API_KEY
+        sync: false
+      - key: AGENTMAIL_INBOX_ID
+        sync: false
+      - key: MAIL_RECIPIENT
+        sync: false

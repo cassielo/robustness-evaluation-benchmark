@@ -1,0 +1,248 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Robustness Evaluate</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta name="author" content="" />
+
+	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400" rel="stylesheet">
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/animate.css') }}">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/icomoon.css') }}">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/magnific-popup.css') }}">
+
+	<!-- Owl Carousel -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/owl.carousel.min.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/owl.theme.default.min.css') }}">
+
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+	<!-- Modernizr JS -->
+	<script src="{{ url_for('static', filename='js/modernizr-2.6.2.min.js') }}"></script>
+
+</head>
+<body>
+
+	<div class="colorlib-loader"></div>
+
+	<div id="page">
+		<nav class="colorlib-nav" role="navigation">
+			<div class="top-menu">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-2">
+							<div id="colorlib-logo"><a href="/">Robustness Evaluate</a></div>
+						</div>
+						<div class="col-md-10 text-right menu-1">
+							<ul>
+								<li><a href="/">Home</a></li>
+								<li class="active"><a href="/about">About</a></li>
+								<li><a href="/benchmark">Benchmark</a></li>
+								<li><a href="/submit">Submit</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+
+		<section id="home" class="video-hero" style="height: 400px; background-size:cover; background-position: center center;background-attachment:fixed;" data-section="home">
+			<div class="overlay"></div>
+			<div class="display-t display-t2 text-center">
+				<div class="display-tc display-tc2">
+					<div class="container">
+						<div class="col-md-12 col-md-offset-0">
+							<div class="animate-box">
+								<h2>About Our Benchmark</h2>
+								<!-- <p class="breadcrumbs"><span><a href="index.html">Home</a></span> <span>Contact</span></p> -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<div class="colorlib-intro colorlib-bg-white">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 text-center colorlib-heading animate-box">
+						<h2>Why we need a benchmark?</h2>
+						<p>Recently developed adversarial attacks on neural networks have become more aggressive and dangerous, because of which Artificial Intelligence (AI) models are no longer sufficiently robust against them. It is important to have a set of effective and reliable methods to detect malicious attacks to ensure the security of AI models. Such standardized methods can also serve as a reference for researchers to develop robust models and new kinds of attacks.<p>The algorithm is applicable to any neural network model. Under our observation, there is no AI model that can defend every attack. An AI model may have good defensive capabilities against some attacks but is readily susceptible to others.<p>We proposed a robustness evaluation algorithm that measures a variety of attacks on the AI models to improve their defense. Regardless of the numbers of attacks or models used, our algorithm can validate the robustness of the model in an unbiased way.</p>
+					</div>
+				</div>
+<!-- 				<div class="row">
+					<div class="col-md-12 animate-box">
+						<span class="play"><a href="https://vimeo.com/channels/staffpicks/93951774" class="pulse popup-vimeo"><i class="icon-play3"></i></a></span>
+					</div>
+				</div> -->
+			</div>
+		</div>
+
+		<div class="colorlib-work-featured ">
+			<div class="container">
+				<div class="row mobile-wrap">
+
+					<div class="col-md-5 col-md-push-7 animate-box">
+						<div class="mobile-img" style="background-image: url({{ url_for('static', filename='images/pig.png') }}); background-size: 65%; background-position: center;"></div>
+					</div>
+					<div class="col-md-7 col-md-pull-5 animate-box">
+						<div class="desc">
+							<h2>What is adversarial attack?</h2>
+							<div class="features">
+								<span class="icon"><i class="icon-lightbulb"></i></span>
+								<div class="f-desc">
+									<p>For image recognition models trained with ImageNet or other datasets, often small changes added in the input can make the output change significantly. There are very small changes to the image and it looks no difference to the naked eye. </p>
+								</div>
+							</div>
+							<div class="features">
+								<span class="icon"><i class="icon-circle-compass"></i></span>
+								<div class="f-desc">
+									<p>When training AI model, the input will be a clean and noise-free image and the output will be the category of the image. After knowing which category the image is, we use adversarial attack to add some noise that the naked eye cannot detect. Then, put the adversarial example as input again for the AI model to get the classification output. </p>
+								</div>
+							</div>
+							<div class="features">
+								<span class="icon"><i class="icon-beaker"></i></span>
+								<div class="f-desc">
+									<p>The adversarial attack is effective when the model classifies the adversarial example as different category from the original image.</p>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="colorlib-work-featured colorlib-bg-white">
+			<div class="container">
+				<div class="row mobile-wrap">
+					<div class="col-md-5 animate-box">
+						<div class="mobile-img" style="background-image: url({{ url_for('static', filename='images/blueleft.png') }}); background-size: 65%; background-position: center; height: 650px; width: 95%;" ></div>
+					</div>
+					<div class="col-md-7 animate-box">
+						<div class="desc">
+							<h2>How to evaluate the robustness ?</h2>
+							<div class="features">
+								<span class="icon"><i class="icon-lightbulb"></i></span>
+								<div class="f-desc">
+									<p>Our system uses a scoring algorithm to compute the stability of models and is not limited to the attack type. With more different types of attacks, the robustness evaluation is more complete.</p>
+								</div>
+							</div>
+							<div class="features">
+								<span class="icon"><i class="icon-circle-compass"></i></span>
+								<div class="f-desc">
+									<p>The <span style="font-weight:bold;">Robustness Evaluate Benchmark</span> is a platform for researchers to test the <span style="font-weight:bold;">robustness</span> of their models or the <span style="font-weight:bold;">effectiveness</span> of adversarial attacks. The goal is to use this co-evolution to find truly robust models that resist even the most effective adversarial attacks.</p>
+								</div>
+							</div>
+							<div class="features">
+								<span class="icon"><i class="icon-beaker"></i></span>
+								<div class="f-desc">
+									<p>We test with <span style="font-weight:bold;">three independent datasets</span>, one for each of the common datasets and tasks: <span style="font-weight:bold;">MNIST, CIFAR, and ImageNet.</span></p>
+									</div>
+								</div>
+								<!-- <p><a href="#" class="btn btn-primary btn-outline with-arrow">Start collaborating <i class="icon-arrow-right3"></i></a></p> -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="colorlib-work">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2 text-center colorlib-heading animate-box">
+							<h2>Datasets</h2>
+							<p>We use three independent datasets</p>
+						</div>
+						<div class="col-md-4 animate-box">
+							<div class="work-grid">
+								<div  class="work-img" style="background-image: url({{ url_for('static', filename='images/mnist.png') }})"></div>
+								<div class="desc">
+									<h2><a href="http://yann.lecun.com/exdb/mnist/" target="_blank" rel="noopener noreferrer">MNIST</a></h2>
+									<p>MNIST requires the robust classification of handwritten digits with a resolution of 28x28 pixels.</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 animate-box">
+							<div class="work-grid">
+								<div  class="work-img" style="background-image: url({{ url_for('static', filename='images/cifar.png') }})"></div>
+								<div class="desc">
+									<h2><a href="https://www.cs.toronto.edu/~kriz/cifar.html" target="_blank" rel="noopener noreferrer">CIFAR-10</a></h2>
+									<p>CIFAR-10 requires the robust classification of 32x32 pixel natural images from ten different classes.</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 animate-box">
+							<div class="work-grid">
+								<div class="work-img" style="background-image: url({{ url_for('static', filename='images/imagenet.png') }})"></div>
+								<div class="desc">
+									<h2><a href="https://www.image-net.org/" target="_blank" rel="noopener noreferrer">ImageNet</a></h2>
+									<p>ImageNet requires the robust classification of 256x256 pixel natural images into 1000 classes.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<footer id="colorlib-footer">
+				<div class="copy">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12 text-center">
+								Design by SY LAB
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+
+		<div class="gototop js-top">
+			<a href="#" class="js-gotop"><i class="icon-arrow-up2"></i></a>
+		</div>
+
+		<!-- jQuery -->
+		<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+		<!-- jQuery Easing -->
+		<script src="{{ url_for('static', filename='js/jquery.easing.1.3.js') }}"></script>
+		<!-- Bootstrap -->
+		<script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+		<!-- Waypoints -->
+		<script src="{{ url_for('static', filename='js/jquery.waypoints.min.js') }}"></script>
+		<!-- Stellar Parallax -->
+		<script src="{{ url_for('static', filename='js/jquery.stellar.min.js') }}"></script>
+		<!-- Owl carousel -->
+		<script src="{{ url_for('static', filename='js/owl.carousel.min.js') }}"></script>
+		<!-- Magnific Popup -->
+		<script src="{{ url_for('static', filename='js/jquery.magnific-popup.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/magnific-popup-options.js') }}"></script>
+		<!-- Counters -->
+		<script src="{{ url_for('static', filename='js/jquery.countTo.js') }}"></script>
+		<!-- Main -->
+		<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+	</body>
+	</html>

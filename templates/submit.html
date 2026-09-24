@@ -1,0 +1,225 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Robustness Evaluate</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta name="author" content="" />
+
+  <!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400" rel="stylesheet">
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/animate.css') }}">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/icomoon.css') }}">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/magnific-popup.css') }}">
+
+	<!-- Owl Carousel -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/owl.carousel.min.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/owl.theme.default.min.css') }}">
+
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+	<!-- Modernizr JS -->
+	<script src="{{ url_for('static', filename='js/modernizr-2.6.2.min.js') }}"></script>
+
+	</head>
+	<body>
+		
+	<div class="colorlib-loader"></div>
+
+	<div id="page">
+		<nav class="colorlib-nav" role="navigation">
+			<div class="top-menu">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-2">
+							<div id="colorlib-logo"><a href="/">Robustness Evaluate</a></div>
+						</div>
+						<div class="col-md-10 text-right menu-1">
+							<ul>
+								<li><a href="/">Home</a></li>
+								<li><a href="/about">About</a></li>
+								<li><a href="/benchmark">Benchmark</a></li>
+								<li class="active"><a href="/submit">Submit</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+
+		<section id="home" class="video-hero" style="height: 400px; background-size:cover; background-position: center center;background-attachment:fixed;" data-section="home">
+		<div class="overlay"></div>
+			<div class="display-t display-t2 text-center">
+				<div class="display-tc display-tc2">
+					<div class="container">
+						<div class="col-md-12 col-md-offset-0">
+							<div class="animate-box">
+								<h2>Submit your own model</h2>
+								<!-- <p class="breadcrumbs"><span><a href="index.html">Home</a></span> <span>Contact</span></p> -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<div id="colorlib-contact">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-5 col-md-push-7 animate-box">
+						<h2>Submission format</h2>
+						<div class="row">
+							<div class="col-md-12">
+								<div class="contact-info-wrap-flex">
+									<div class="con-info">
+										<p><span style="font-weight:bold;" ><!-- <i class="icon-location-2"></i> -->Model</span>: It can only accept the format of .h5 files and cannot be over 500 MB. The file should be uploaded to Dropbox or GitHub. Be sure that your URL link can be downloaded by anyone knowing the link.</p>
+									</div>
+									<div class="con-info">
+										<p><span style="font-weight:bold;" ><!-- <i class="icon-phone3"></i> -->Attack</span>: It can only be written in Python and should only include an attack function inside. The file should be uploaded to Dropbox or GitHub. Be sure that your URL link can be downloaded by anyone knowing this link.</p>
+									</div>
+									
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-7 col-md-pull-5 animate-box">
+						<h2>Make a Submission</h2>
+						{% with messages = get_flashed_messages(with_categories=true) %}
+							{% if messages %}
+							<div class="alert alert-{{ 'success' if messages[0][0] == 'success' else 'danger' }}" role="alert">
+								{% if messages | length > 1 %}
+								<ul style="margin-bottom: 0; padding-left: 18px;">
+									{% for category, message in messages %}
+									<li>{{ message }}</li>
+									{% endfor %}
+								</ul>
+								{% else %}
+								{{ messages[0][1] }}
+								{% endif %}
+							</div>
+							{% endif %}
+						{% endwith %}
+						<form action="/sendmail" method="post">
+							<input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+							<div class="row form-group">
+								<div class="col-md-6">
+									<label for="type">Type <span style="color: FireBrick">*</span></label>
+									<select name="type" class="form-control" required>
+									    <option id="model" value="model">Model</option>
+									    <option id="attack" value="attack">Attack</option>
+									</select>
+									<!-- <input type="text" id="fname" class="form-control" placeholder="Your firstname"> -->
+								</div>
+								<div class="col-md-6">
+									<label for="dataset">Dataset <span style="color: FireBrick">*</span></label>
+									<!-- <input type="text" id="email" class="form-control" placeholder="Your email address"> -->
+									<select name="dataset" class="form-control" required>
+									    <option id="mnist" value="mnist" >MNIST</option>
+									    <option id="cifar10" value="cifar10" >CIFAR10</option>
+									    <option id="imagenet" value="imagenet"  >ImageNet</option>
+									</select>	
+								</div>
+								
+							</div>
+							
+							<div class="row form-group">
+								<div class="col-md-12">
+									<label for="name">Name <span style="color: FireBrick">*</span></label>
+									<!-- <input type="text" id="subject" class="form-control" placeholder="Your subject of this message"> -->
+									<input class="form-control" name="name" id="name" type="text" required>
+								</div>
+							</div>
+							
+							<div class="row form-group">
+								<div class="col-md-12">
+									<label for="email">Email <span style="color: FireBrick">*</span></label>
+									<!-- <input type="text" id="subject" class="form-control" placeholder="Your subject of this message"> -->
+									<input class="form-control" name="email" id="email"  type="email" required>
+								</div>
+							</div>
+
+							<div class="row form-group">
+								<div class="col-md-12">
+									<label for="url">Submission URL<span style="color: FireBrick">*</span></label>
+									<!-- <input type="text" id="subject" class="form-control" placeholder="Your subject of this message"> -->
+									<input class="form-control" name="url" id="url"  type="url" required>
+								</div>
+							</div>
+
+							<div class="row form-group">
+								<div class="col-md-12">
+									<label for="message">Message</label>
+									<textarea name="message" id="message" cols="30" rows="10" class="form-control"></textarea>
+								</div>
+							</div>
+							<div class="form-group">
+								<input type="submit" value="Submit" class="btn btn-primary">
+							</div>
+						</form>		
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<footer id="colorlib-footer">
+			<div class="copy">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12 text-center">
+							Design by SY LAB
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up2"></i></a>
+	</div>
+	
+	<!-- jQuery -->
+	<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+	<!-- jQuery Easing -->
+	<script src="{{ url_for('static', filename='js/jquery.easing.1.3.js') }}"></script>
+	<!-- Bootstrap -->
+	<script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+	<!-- Waypoints -->
+	<script src="{{ url_for('static', filename='js/jquery.waypoints.min.js') }}"></script>
+	<!-- Stellar Parallax -->
+	<script src="{{ url_for('static', filename='js/jquery.stellar.min.js') }}"></script>
+	<!-- Owl carousel -->
+	<script src="{{ url_for('static', filename='js/owl.carousel.min.js') }}"></script>
+	<!-- Magnific Popup -->
+	<script src="{{ url_for('static', filename='js/jquery.magnific-popup.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/magnific-popup-options.js') }}"></script>
+	<!-- Counters -->
+	<script src="{{ url_for('static', filename='js/jquery.countTo.js') }}"></script>
+	<!-- Main -->
+	<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+	</body>
+</html>
